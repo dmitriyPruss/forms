@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src='./js/index.js'></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Forms</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Contact form</h2>
+            <p>Please fill in your information and we`ll be sending your order.</p>
+
+            <form action="#" method='GET'>
+                <div>
+                    <label>
+                        <span>Your name</span>
+                        <input type="text" placeholder='first name...'>
+                        <input type="text" placeholder='last name...'>
+                    </label>
+                </div>
+                
+                <div>
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" placeholder="your_mail@mail.com">
+                </div>
+        
+                <div>
+                    <label>
+                        <span>Phone*</span>
+                        <input type="tel" placeholder="000">
+                        <input type="tel" placeholder="000">
+                        <input type="tel" placeholder="0000">
+                    </label>
+                </div>
+        
+                <label>
+                    <span>Message subject*</span>
+                    <select name="selectValues">
+                        <option value="Tree">Tree</option>
+                        <option value="Flower">Flower</option>
+                        <option value="Mushroom">Mushroom</option>
+                        <option value="Animal">Animal</option>
+                        <option value="Insect">Insect</option>
+                    </select>
+                </label>
+        
+                <div>
+                    <label for="messageArea">Message*</label>
+                    <textarea id="messageArea" cols="60" rows="5"></textarea>
+                </div>
+        
+                <hr>
+                <input type="submit" value="SUBMIT FORM">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
