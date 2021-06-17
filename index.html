@@ -11,53 +11,74 @@
 </head>
 <body>
     <main>
-        <section>
+        <article>
             <h2>Contact form</h2>
             <p>Please fill in your information and we`ll be sending your order.</p>
 
             <form action="#" method='GET'>
-                <div>
-                    <label>
-                        <span>Your name</span>
-                        <input type="text" placeholder='first name...'>
-                        <input type="text" placeholder='last name...'>
-                    </label>
-                </div>
-                
-                <div>
-                    <label for="email">Your email</label>
-                    <input type="email" id="email" placeholder="your_mail@mail.com">
-                </div>
-        
-                <div>
-                    <label>
-                        <span>Phone*</span>
-                        <input type="tel" placeholder="000">
-                        <input type="tel" placeholder="000">
-                        <input type="tel" placeholder="0000">
-                    </label>
-                </div>
-        
-                <label>
-                    <span>Message subject*</span>
-                    <select name="selectValues">
-                        <option value="Tree">Tree</option>
-                        <option value="Flower">Flower</option>
-                        <option value="Mushroom">Mushroom</option>
-                        <option value="Animal">Animal</option>
-                        <option value="Insect">Insect</option>
-                    </select>
-                </label>
-        
-                <div>
-                    <label for="messageArea">Message*</label>
-                    <textarea id="messageArea" cols="60" rows="5"></textarea>
-                </div>
-        
-                <hr>
-                <input type="submit" value="SUBMIT FORM">
+                <section>
+                    <div class="flexBlock">
+                        <div class='oddChild'>
+                            <label for="name">Your name</label>
+                        </div>
+                        <div class='evenChild'>
+                            <input type="text" id="name" placeholder='first name...' 
+                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)"
+                            size='21' maxlength="20" required>
+                            <input type="text" placeholder='last name...'
+                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)"
+                            size='21' maxlength="20" required>
+                        </div>
+                    </div>
+                    <div class="flexBlock">
+                        <div class='oddChild'>
+                            <label for="email">Your email</label>
+                        </div>
+                        <div class='evenChild'>
+                            <input type="email" id="email" placeholder="your_mail@mail.com" 
+                            size='35' maxlength="33" required
+                            pattern='[\w]{1,19}@[a-z]{4,5}\.[a-z]{3}(\.[a-z]{2,3})?'>  
+                        </div>
+                    </div>
+                    <div class="flexBlock">
+                        <div class='oddChild'>
+                            <label for="phone">Phone*</label>
+                        </div>
+                        <div class='evenChild'>
+                            <input type="tel" id='phone' placeholder="000" pattern='[0-9]{3}' maxlength="3" size='10'>
+                            <input type="tel" placeholder="000" pattern='[0-9]{3}' maxlength="3" size='10'>
+                            <input type="tel" placeholder="0000" pattern='[0-9]{4}' maxlength="4" size='15'>
+                        </div>
+                    </div>
+
+                    <div class="flexBlock">
+                        <div class='oddChild'>
+                            <label>Message subject*</label>
+                        </div>
+                        <div class='evenChild'>
+                            <select name="selectValues">
+                                <option value="Tree">Tree</option>
+                                <option value="Flower">Flower</option>
+                                <option value="Mushroom">Mushroom</option>
+                                <option value="Animal">Animal</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flexBlock">
+                        <div class='oddChild'>
+                            <label for="messageArea">Message*</label>
+                        </div>
+                        <div class='evenChild'>
+                            <textarea id="messageArea" cols="42" rows="5"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <div class='submitButton'>SUBMIT FORM</div>
             </form>
-        </section>
+        </article>
     </main>
 </body>
 </html>

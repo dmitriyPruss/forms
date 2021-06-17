@@ -3,33 +3,38 @@
 }
 
 :root {
-    font-size: 14px;
+    font-size: 16px;
+}
+
+body {
+    background-image: url('.././imgs/forest.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 435px;
+    height: 100vh;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-image: url('.././imgs/forest.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    height: 100vh;
+    width: 98%;
+    height: 98%;
 }
 
-section {
+article {
     display: flex;
     flex-direction: column;
-
-    height: 80%;
-    max-width: 700px;
+    
+    height: 90%;
+    width: 80%;
 
     margin: 0 auto;
+    padding: 10px;
     color: white;
 
-    box-shadow: -2px -2px 2px 3px rgb(132, 204, 196);
+    box-shadow: -1px -1px 5px 5px rgb(36, 163, 24);
 }
 
 h2{
@@ -38,17 +43,45 @@ h2{
 
 h2 + p {
     font-size: 0.8rem;
+    margin: 10px 0;
 }
 
 form {
-    height: 80%;
+    height: 100%;
+    width: 95%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: stretch;
-
+    align-items: center;
 }
-  
+
+section {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexBlock {
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.oddChild{
+    width: 150px;
+    line-height: 30px;
+    font-size: 0.9rem;
+}
+.evenChild{
+    line-height: 30px;
+    font-size: 0.9rem;
+}
+
+input, select, label {
+    font-size: 1.2rem;
+}
   
 input:valid {
     border-color: green;
@@ -58,4 +91,77 @@ input:valid {
 input:invalid {
     border-color: red;
     background-color: rgb(226, 148, 148);
+}
+
+.submitButton {
+    width: 500px;
+    border: 3px solid rgb(20, 92, 14);
+    color: rgb(203, 231, 201);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    padding: 3px 0;
+}
+
+@media screen and (max-width: 780px) {
+    .flexBlock {
+        margin-bottom: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submitButton {
+        width: 400px;
+        border: 3px solid rgb(20, 92, 14);
+        color: rgb(203, 231, 201);
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        padding: 3px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    article {
+        display: flex;
+        flex-direction: column;
+        
+        height: 90%;
+        width: 98%;
+    
+        margin: 0 auto;
+        padding: 10px;
+        color: white;
+    
+        box-shadow: -1px -1px 5px 5px rgb(36, 163, 24);
+    }
+
+    form {
+        height: 100%;
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start
+    }
+
+    .evenChild{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 0.9rem;
+    }
+
+    .submitButton {
+        width: 300px;
+        border: 3px solid rgb(20, 92, 14);
+        color: rgb(203, 231, 201);
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        padding: 3px 0;
+    }
 }
