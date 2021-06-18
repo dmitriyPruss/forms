@@ -7,161 +7,208 @@
 }
 
 body {
+    min-width: 360px;
+    height: 100vh;
     background-image: url('.././imgs/forest.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-width: 435px;
-    height: 100vh;
 }
 
 main {
+    width: 98%;
+    height: 98%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 98%;
-    height: 98%;
 }
 
-article {
+article {    
+    height: 95%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    
-    height: 90%;
-    width: 80%;
-
-    margin: 0 auto;
-    padding: 10px;
     color: white;
-
-    box-shadow: -1px -1px 5px 5px rgb(36, 163, 24);
+    box-shadow: -1px -1px 5px 5px rgb(7, 95, 88);
+    overflow-y: auto;
 }
 
 h2{
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 50px 0 20px;
 }
 
 h2 + p {
-    font-size: 0.8rem;
-    margin: 10px 0;
+    font-size: 0.9rem;
 }
 
 form {
     height: 100%;
-    width: 95%;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 }
 
 section {
-    width: 98%;
+    margin: 45px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formBlock1 {
+    margin: 0 10px 0 0;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.formBlock2 {
+    width: 78%;
     display: flex;
     flex-direction: column;
 }
 
-.flexBlock {
-    margin-bottom: 5px;
+.first, .second, .third, .other{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.oddChild{
-    width: 150px;
-    line-height: 30px;
-    font-size: 0.9rem;
-}
-.evenChild{
-    line-height: 30px;
-    font-size: 0.9rem;
+.first > input {
+    width: 48%;
 }
 
-input, select, label {
-    font-size: 1.2rem;
+.second > input {
+    width: 100%;
 }
-  
+
+.third > input {
+    width: 28%;
+}
+
+.third > input:last-child {
+    width: 38%;
+}
+
+.other > textarea, select {
+    width: 100%;
+}
+
+input, textarea, select {
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input, label, select {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
 input:valid {
-    border-color: green;
-    background-color: rgb(194, 235, 194);
+    border-color: rgb(9, 82, 76);
+    background-color: rgb(173, 204, 201);
 }
   
 input:invalid {
-    border-color: red;
-    background-color: rgb(226, 148, 148);
+    border-color: rgb(109, 6, 6);
+    background-color: rgb(226, 177, 177);
+}
+
+.line {
+    width: 100%;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
 }
 
 .submitButton {
-    width: 500px;
-    border: 3px solid rgb(20, 92, 14);
+    width: 78%;
+    padding: 3px 0;
+    border: 3px solid rgb(5, 83, 77);
     color: rgb(203, 231, 201);
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    padding: 3px 0;
 }
 
-@media screen and (max-width: 780px) {
-    .flexBlock {
-        margin-bottom: 5px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .submitButton {
-        width: 400px;
-        border: 3px solid rgb(20, 92, 14);
-        color: rgb(203, 231, 201);
-        font-weight: bold;
-        text-align: center;
-        cursor: pointer;
-        padding: 3px 0;
-    }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 890px) {
     article {
         display: flex;
         flex-direction: column;
-        
-        height: 90%;
-        width: 98%;
-    
+        height: 97%;
+        width: 99%;
         margin: 0 auto;
-        padding: 10px;
+        padding: 2px;
         color: white;
-    
-        box-shadow: -1px -1px 5px 5px rgb(36, 163, 24);
+        box-shadow: -1px -1px 5px 5px rgb(7, 95, 88);
     }
 
-    form {
-        height: 100%;
-        width: 95%;
+    section {
+        margin: 35px 0;
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: flex-start
+        justify-content: space-between;
     }
 
-    .evenChild{
+    .first, .third{
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        font-size: 0.9rem;
+        align-items: stretch;
+        justify-content: space-between;
     }
 
-    .submitButton {
-        width: 300px;
-        border: 3px solid rgb(20, 92, 14);
-        color: rgb(203, 231, 201);
+    .first > input {
+        width: 100%;
+    }
+
+    .third > input, .third > input:last-child {
+        width: 100%;
+    }
+
+    .formBlock1 {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        width: 24%;
         font-weight: bold;
-        text-align: center;
-        cursor: pointer;
-        padding: 3px 0;
+    }
+
+    .formBlock1 > label:first-child {
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .formBlock1 > label:nth-child(3n) {
+        height: 90px;
+        margin-bottom: 30px;
+    }
+
+    .formBlock1 > label:nth-child(4n) {
+        height:30px;
+        margin-bottom: 38px;
+    }
+
+    .other > select {
+        margin-bottom: 38px;
+        width: 100%;
     }
 }
+
+
+
+
+
+

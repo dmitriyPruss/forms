@@ -17,45 +17,34 @@
 
             <form action="#" method='GET'>
                 <section>
-                    <div class="flexBlock">
-                        <div class='oddChild'>
-                            <label for="name">Your name</label>
-                        </div>
-                        <div class='evenChild'>
-                            <input type="text" id="name" placeholder='first name...' 
-                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)"
-                            size='21' maxlength="20" required>
-                            <input type="text" placeholder='last name...'
-                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)"
-                            size='21' maxlength="20" required>
-                        </div>
+                    <h2 hidden>Blocks</h2>
+                    <div class="formBlock1">
+                        <label for="name">Your name</label>
+                        <label for="email">Your email</label>
+                        <label for="phone">Phone*</label>
+                        <label>Message subject*</label>
+                        <label for="messageArea">Message*</label>
                     </div>
-                    <div class="flexBlock">
-                        <div class='oddChild'>
-                            <label for="email">Your email</label>
+                    <div class='formBlock2'>
+                        <div class='first'>
+                            <input type="text" id="name" placeholder='first name...' 
+                            maxlength="20" required
+                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)">
+                            <input type="text" placeholder='last name...'
+                            maxlength="20" required
+                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)">
                         </div>
-                        <div class='evenChild'>
+                        <div class='second'>
                             <input type="email" id="email" placeholder="your_mail@mail.com" 
-                            size='35' maxlength="33" required
+                            maxlength="33" required
                             pattern='[\w]{1,19}@[a-z]{4,5}\.[a-z]{3}(\.[a-z]{2,3})?'>  
                         </div>
-                    </div>
-                    <div class="flexBlock">
-                        <div class='oddChild'>
-                            <label for="phone">Phone*</label>
+                        <div class='third'>
+                            <input type="tel" id='phone' placeholder="000" pattern='[0-9]{3}' maxlength="3" >
+                            <input type="tel" placeholder="000" pattern='[0-9]{3}' maxlength="3">
+                            <input type="tel" placeholder="0000" pattern='[0-9]{4}' maxlength="4">
                         </div>
-                        <div class='evenChild'>
-                            <input type="tel" id='phone' placeholder="000" pattern='[0-9]{3}' maxlength="3" size='10'>
-                            <input type="tel" placeholder="000" pattern='[0-9]{3}' maxlength="3" size='10'>
-                            <input type="tel" placeholder="0000" pattern='[0-9]{4}' maxlength="4" size='15'>
-                        </div>
-                    </div>
-
-                    <div class="flexBlock">
-                        <div class='oddChild'>
-                            <label>Message subject*</label>
-                        </div>
-                        <div class='evenChild'>
+                        <div class="other">
                             <select name="selectValues">
                                 <option value="Tree">Tree</option>
                                 <option value="Flower">Flower</option>
@@ -64,19 +53,17 @@
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                    </div>
-
-                    <div class="flexBlock">
-                        <div class='oddChild'>
-                            <label for="messageArea">Message*</label>
-                        </div>
-                        <div class='evenChild'>
-                            <textarea id="messageArea" cols="42" rows="5"></textarea>
+                        <div class="other">
+                            <textarea id="messageArea" rows="5"></textarea>
                         </div>
                     </div>
                 </section>
-
-                <div class='submitButton'>SUBMIT FORM</div>
+                <div class='line'>
+                    <hr>
+                </div>
+                <div class="button">
+                    <div class='submitButton'>SUBMIT FORM</div>
+                </div>
             </form>
         </article>
     </main>
