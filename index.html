@@ -26,25 +26,25 @@
                         <label for="messageArea">Message*</label>
                     </div>
                     <div class='formBlock2'>
-                        <div class='first'>
+                        <div class='fullname'>
                             <input type="text" id="name" placeholder='first name...' 
                             maxlength="20" required
-                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)">
+                            pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)" autofocus>
                             <input type="text" placeholder='last name...'
                             maxlength="20" required
                             pattern="([A-Z][a-z]*)([-]?[\s]?)([A-Za-z]?[a-z]*)">
                         </div>
-                        <div class='second'>
+                        <div class='email'>
                             <input type="email" id="email" placeholder="your_mail@mail.com" 
                             maxlength="33" required
                             pattern='[\w]{1,19}@[a-z]{4,5}\.[a-z]{3}(\.[a-z]{2,3})?'>  
                         </div>
-                        <div class='third'>
+                        <div class='phone'>
                             <input type="tel" id='phone' placeholder="000" pattern='[0-9]{3}' maxlength="3" >
                             <input type="tel" placeholder="000" pattern='[0-9]{3}' maxlength="3">
                             <input type="tel" placeholder="0000" pattern='[0-9]{4}' maxlength="4">
                         </div>
-                        <div class="other">
+                        <div class="otherInfo">
                             <select name="selectValues">
                                 <option value="Tree">Tree</option>
                                 <option value="Flower">Flower</option>
@@ -53,7 +53,7 @@
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        <div class="other">
+                        <div class="otherInfo">
                             <textarea id="messageArea" rows="5"></textarea>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                     <hr>
                 </div>
                 <div class="button">
-                    <div class='submitButton'>SUBMIT FORM</div>
+                    <input class='submitButton' type="submit" value="SUBMIT FORM">
                 </div>
             </form>
         </article>

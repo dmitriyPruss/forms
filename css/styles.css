@@ -75,29 +75,29 @@ section {
     flex-direction: column;
 }
 
-.first, .second, .third, .other{
+.fullname, .email, .phone, .otherInfo{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.first > input {
+.fullname > input {
     width: 48%;
 }
 
-.second > input {
+.email > input {
     width: 100%;
 }
 
-.third > input {
+.phone > input {
     width: 28%;
 }
 
-.third > input:last-child {
+.phone > input:last-child {
     width: 38%;
 }
 
-.other > textarea, select {
+.otherInfo > textarea, select {
     width: 100%;
 }
 
@@ -133,10 +133,13 @@ input:invalid {
     margin-top: 50px;
 }
 
-.submitButton {
+div > .submitButton {
     width: 78%;
+    height: 30px;
+    line-height: 15px;
     padding: 3px 0;
     border: 3px solid rgb(5, 83, 77);
+    background:rgb(5, 83, 77);
     color: rgb(203, 231, 201);
     font-weight: bold;
     text-align: center;
@@ -162,7 +165,7 @@ input:invalid {
         justify-content: space-between;
     }
 
-    .first, .third{
+    .fullname, .phone{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -170,11 +173,11 @@ input:invalid {
         justify-content: space-between;
     }
 
-    .first > input {
+    .fullname > input {
         width: 100%;
     }
 
-    .third > input, .third > input:last-child {
+    .phone > input, .phone > input:last-child {
         width: 100%;
     }
 
@@ -201,9 +204,21 @@ input:invalid {
         margin-bottom: 38px;
     }
 
-    .other > select {
+    .otherInfo > select {
         margin-bottom: 38px;
         width: 100%;
+    }
+
+    div > .submitButton {
+        width: 75%;
+        height: 30px;
+        line-height: 15px;
+        padding: 3px 0;
+        border: 3px solid rgb(5, 83, 77);
+        color: rgb(203, 231, 201);
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
     }
 }
 
